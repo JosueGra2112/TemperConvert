@@ -1,0 +1,84 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "UnitType"
+            }
+          ],
+          "name": "ConvertTemperature",
+          "samples": [
+            "A cuánto equivale {temperature} grados {unit} en Fahrenheit",
+            "Convertir {temperature} grados {unit} a Fahrenheit",
+            "Convierte {temperature} grados {unit} a Fahrenheit",
+            "Cuántos grados Fahrenheit son {temperature} grados {unit}",
+            "Dime la conversión de {temperature} grados {unit} a Fahrenheit",
+            "Cuánto son {temperature} grados {unit} en Fahrenheit",
+            "A cuánto equivalen {temperature} grados {unit}"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "Cancelar",
+            "Detener",
+            "Para"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "Ayuda",
+            "Qué puedo hacer",
+            "Cómo funciona esto"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "Adiós",
+            "Salir",
+            "Detener"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "Celsius",
+                  "centígrados"
+                ],
+                "value": "centígrados"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "farenheit",
+                  "fahrenheit"
+                ],
+                "value": "Fahrenheit"
+              }
+            }
+          ],
+          "name": "UnitType"
+        }
+      ],
+      "invocationName": "conversor temperatura"
+    }
+  }
+}
